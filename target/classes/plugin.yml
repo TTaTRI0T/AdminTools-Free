@@ -1,0 +1,46 @@
+name: AdminToolsLite
+version: 3.0.0
+main: com.example.admintools.Main
+api-version: "1.21"
+softdepend: [PlaceholderAPI]
+commands:
+  kick:
+    permission: admintools.kick
+  ban:
+    permission: admintools.ban
+  tempban:
+    permission: admintools.ban
+  unban:
+    permission: admintools.unban
+  mute:
+    permission: admintools.mute
+  unmute:
+    permission: admintools.unmute
+  warn:
+    permission: admintools.warn
+  check:
+    permission: admintools.check
+  staffchat:
+    aliases: [sc]
+    permission: admintools.staffchat
+  adminmenu:
+    permission: admintools.admin
+permissions:
+  admintools.admin:
+    default: op
+  admintools.kick:
+    default: op
+  admintools.ban:
+    default: op
+  admintools.unban:
+    default: op
+  admintools.mute:
+    default: op
+  admintools.unmute:
+    default: op
+  admintools.warn:
+    default: op
+  admintools.check:
+    default: op
+  admintools.staffchat:
+    default: op

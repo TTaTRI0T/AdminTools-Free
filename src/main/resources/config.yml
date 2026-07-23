@@ -1,0 +1,80 @@
+# AdminTools Lite v3 Configuration
+prefix: "&8[&cAdmin&8]&r "
+messages:
+  kick: "%prefix% &b%player% &7был кикнут. Причина: &c%reason%"
+  ban: "%prefix% &b%player% &7забанен навсегда. Причина: &c%reason%"
+  tempban: "%prefix% &b%player% &7забанен на &c%time%&7. Причина: &c%reason%"
+  unban: "%prefix% &b%player% &7разбанен."
+  mute: "%prefix% &b%player% &7замучен на &c%time%&7. Причина: &c%reason%"
+  unmute: "%prefix% &b%player% &7размучен."
+  warn: "%prefix% &b%player% &7получил предупреждение. Причина: &c%reason%"
+  staffchat: "&d[SC] &f%player%&7:&r %message%"
+  no-permission: "&cУ вас нет прав."
+  player-not-found: "&cИгрок не найден."
+
+screencheck:
+  duration: 600
+  spawn-location:
+    use-world-spawn: true
+    world: "world"
+    x: 0.0
+    y: 64.0
+    z: 0.0
+    yaw: 0.0
+    pitch: 0.0
+  ban-duration-refuse: "7d"
+  ban-duration-admit: "3d"
+  instruction:
+    - "&c&lВНИМАНИЕ! &7Вы подозреваетесь в использовании читов."
+    - "&7Свяжитесь с администратором через Discord."
+    - "&7Скачайте программу AnyDesk для демонстрации экрана."
+    - "&7У вас есть &c10 минут &7на прохождение проверки."
+    - "&7Если вы признаетесь в использовании читов сейчас,"
+    - "&7срок бана будет сокращён. Введите &a/ss admit &7для признания."
+    - "&7В случае отказа от проверки вы будете автоматически забанены."
+
+# Гибкая система предупреждений
+warn-actions:
+  "3": "mute 30m"
+  "5": "tempban 3d"
+  "10": "ban"
+  
+vanish:
+  hide-in-tab: true
+  disable-pickup: true
+
+# Фильтр чата
+chat-filter:
+  enabled: false
+  words:
+    - "badword"
+  actions:
+    "1": "mute 10m"
+    "3": "tempban 1d"
+    "5": "ban"
+  notify-staff: true
+  
+# Discord
+discord:
+  enabled: true
+  webhook-url: "https://discord.com/api/webhooks/ВАШ_ВЕБХУК"  
+  channels:
+    punishments: true
+    reports: true
+    screencheck: true
+  # Настройки Embed (по желанию)
+  embed:
+    colors:
+      ban: 16711680
+      mute: 16776960
+      kick: 16753920
+      warn: 16776960
+      report: 3447003
+      screencheck: 10181046
+
+logging:
+  enabled: true
+  file: "logs/admin.log"
+
+storage:
+  type: "yaml"
