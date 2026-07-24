@@ -1,4 +1,4 @@
-# AdminTools Lite
+# Modero Lite
 
 ![Version](https://img.shields.io/badge/version-3.0.0-blue)
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-green)
